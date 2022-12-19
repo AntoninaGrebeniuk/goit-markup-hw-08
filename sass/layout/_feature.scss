@@ -1,0 +1,35 @@
+.section__nopadding {
+  padding-bottom: 0;
+}
+
+.feature {
+  display: flex;
+
+  &__thumb {
+    @include centeredFlex();
+    margin-bottom: 30px;
+
+    width: 270px;
+    height: 120px;
+    background-color: $light-background-color;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include font(null);
+    text-transform: uppercase;
+
+    color: $primary-text-color;
+  }
+
+  &__text {
+    @include font(null, $lh: 1.71);
+
+    color: $secondary-text-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}

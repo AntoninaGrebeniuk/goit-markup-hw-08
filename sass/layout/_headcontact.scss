@@ -1,0 +1,33 @@
+.contact {
+  @include centeredFlex();
+  margin-left: auto;
+
+  &__item {
+    @include centeredFlex();
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__mail-icon,
+  &__phone-icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.contact__link {
+  @include centeredFlex();
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include font($fw: 500, $ls: 0.02em);
+  color: $secondary-text-color;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

@@ -1,0 +1,12 @@
+.footer-box {
+  display: inline-block;
+}
+
+.slogan {
+  margin-bottom: 20px;
+
+  @include font();
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+}

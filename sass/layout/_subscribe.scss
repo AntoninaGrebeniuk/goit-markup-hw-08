@@ -1,0 +1,71 @@
+.subscribe {
+  position: relative;
+  display: inline-flex;
+
+  margin-right: 0;
+  margin-left: auto;
+  min-width: 570px;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+
+    @include font($fw: null);
+    text-transform: uppercase;
+
+    color: $primary-white-color;
+  }
+
+  &__icon {
+    margin-left: 10px;
+    fill: currentColor;
+  }
+}
+
+.subscribe__input {
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  min-width: 358px;
+  height: 50px;
+
+  color: $primary-white-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border $duration $timing-function;
+
+  &::placeholder {
+    @include font($fw: null, $fs: 16px, $lh: 1.25);
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+}
+
+.subscribe__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @include centeredFlex(inline-flex);
+
+  width: 200px;
+  height: 50px;
+
+  &:hover,
+  &:focus {
+    background-color: $focus-btn-color;
+  }
+}
