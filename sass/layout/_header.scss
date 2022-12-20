@@ -2,10 +2,10 @@
   margin-left: auto;
   margin-right: auto;
 
-  width: 1600px;
+  // width: 1600px;
   border-bottom: 1px solid #ececec;
 
   &__container {
-    @include centeredFlex();
+    // @include centeredFlex();
   }
 }

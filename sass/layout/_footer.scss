@@ -7,7 +7,14 @@
   background-color: $background-color;
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 }

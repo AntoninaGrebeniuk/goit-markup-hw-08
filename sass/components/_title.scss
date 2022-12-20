@@ -1,7 +1,12 @@
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include font(null, $fs: 36px, $lh: 1.17);
+  @include font(null, $fs: 28px, $lh: 1.18);
   text-align: center;
   color: $primary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    @include font(null, $fs: 36px, $lh: 1.17);
+  }
 }

@@ -1,13 +1,13 @@
 .contact {
-  @include centeredFlex();
-  margin-left: auto;
+  // @include centeredFlex();
+  // margin-left: auto;
 
   &__item {
-    @include centeredFlex();
+    // @include centeredFlex();
   }
 
   &__item:not(:last-child) {
-    margin-right: 50px;
+    // margin-right: 50px;
   }
 
   &__mail-icon,
@@ -18,7 +18,7 @@
 }
 
 .contact__link {
-  @include centeredFlex();
+  // @include centeredFlex();
   padding-top: 32px;
   padding-bottom: 32px;
 

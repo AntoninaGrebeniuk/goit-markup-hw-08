@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
 
@@ -8,32 +8,49 @@
     url('../images/bg_image.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
+  // min-width: 1600px;
+  // min-height: 600px;
   max-width: 1600px;
   max-height: 600px;
   text-align: center;
   background-color: $background-color;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 696px;
+    max-width: 360px;
 
-    @include font($fw: 900, $fs: 44px, $lh: 1.36, $ls: 0.06em);
+    @include font($fw: 900, $fs: 26px, $lh: 1.62, $ls: 0.06em);
     text-transform: uppercase;
 
     color: $primary-white-color;
+
+    @media screen and (min-width: $desktop) {
+      @include font($fw: 900, $fs: 44px, $lh: 1.36, $ls: 0.06em);
+      max-width: 696px;
+    }
   }
 }
 
 .hero__btn {
   padding: 10px 32px;
-  min-width: 216px;
+  min-width: 200px;
 
   &:hover,
   &:focus {
     background-color: $focus-btn-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 216px;
   }
 }

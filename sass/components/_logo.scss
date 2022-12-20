@@ -1,8 +1,12 @@
 .logo {
   font-family: 'Raleway', sans-serif;
-  @include font(null, $fs: 26px, $lh: 1.19);
+  @include font(null, $fs: 24px, $lh: 1.17);
 
   color: $black-color;
+
+  @media screen and (min-width: $desktop) {
+    @include font(null, $fs: 26px, $lh: 1.19);
+  }
 }
 
 .accent {

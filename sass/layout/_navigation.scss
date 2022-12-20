@@ -1,8 +1,8 @@
 .site-nav {
-  margin-left: 93px;
+  // margin-left: 93px;
 
   &__list {
-    display: flex;
+    // display: flex;
   }
 }
 
@@ -10,14 +10,14 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-right: 50px;
+    // margin-right: 50px;
   }
 }
 
 .site-nav__link {
   position: relative;
 
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 

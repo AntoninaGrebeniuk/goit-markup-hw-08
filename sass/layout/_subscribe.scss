@@ -1,11 +1,4 @@
 .subscribe {
-  position: relative;
-  display: inline-flex;
-
-  margin-right: 0;
-  margin-left: auto;
-  min-width: 570px;
-
   &__field {
     display: flex;
     flex-direction: column;
@@ -24,13 +17,23 @@
     margin-left: 10px;
     fill: currentColor;
   }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    display: inline-flex;
+
+    margin-right: 0;
+    margin-left: auto;
+    min-width: 570px;
+  }
 }
 
 .subscribe__input {
   padding: 15px 16px;
-  margin-right: 12px;
-
-  min-width: 358px;
   height: 50px;
 
   color: $primary-white-color;
@@ -52,13 +55,21 @@
     outline: none;
     border: 1px solid $accent-color;
   }
+
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
+    min-width: 358px;
+  }
 }
 
 .subscribe__btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
   @include centeredFlex(inline-flex);
 
   width: 200px;
@@ -67,5 +78,11 @@
   &:hover,
   &:focus {
     background-color: $focus-btn-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }

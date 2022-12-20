@@ -1,16 +1,24 @@
 .section__team {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1600px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // max-width: 1600px;
   background: $light-background-color;
 }
 
 .team {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
   &__info {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 30px;
+    }
   }
 
   &__subtitle {
@@ -32,7 +40,7 @@
 }
 
 .team__item {
-  flex-basis: calc((100% - 90px) / 4);
+  // flex-basis: calc((100% - 90px) / 4);
 
   background: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -40,6 +48,19 @@
   border-radius: 0px 0px 4px 4px;
 
   &:not(:last-child) {
-    margin-right: $card-gap;
+    @media screen and (max-width: 767px) {
+      margin-bottom: $card-gap;
+    }
+
+    // margin-right: $card-gap;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 120px) / 4);
   }
 }
