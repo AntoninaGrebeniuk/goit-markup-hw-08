@@ -121,13 +121,11 @@
   border-radius: 4px;
   transition: border $duration $timing-function;
 
-  &:hover,
   &:focus {
     outline: none;
     border: 1px solid $accent-color;
   }
 
-  &:hover + .form__icon,
   &:focus + .form__icon {
     color: $accent-color;
   }

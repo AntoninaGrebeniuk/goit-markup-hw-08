@@ -1,0 +1,122 @@
+.mobile-menu {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-color: $primary-white-color;
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  height: 100vh;
+}
+
+.menu-btn__close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &-icon {
+    fill: currentColor;
+  }
+}
+
+.mobile-nav {
+}
+
+.mobile-nav__list {
+}
+
+.mobile-nav__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-nav__link {
+  display: inline-flex;
+
+  @include font($fw: 500, $fs: 40px, $lh: 1.17, $ls: 0.02em);
+
+  color: $primary-text-color;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &.current {
+    color: $accent-color;
+  }
+}
+
+.mobile-contact {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.mobile-contact__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-contact__link-tel {
+  @include font($fw: 500, $fs: 34px, $lh: 1.18, $ls: 0.02em);
+  color: $accent-color;
+}
+
+.mobile-contact__link {
+  @include font($fw: 500, $fs: 24px, $lh: 1.17, $ls: 0.02em);
+  color: $secondary-text-color;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-soc {
+  display: flex;
+  align-items: flex-end;
+}
+
+.mobile-soc__item {
+  display: block;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+}
+.mobile-soc__link {
+  @include font($fw: 500, $fs: 18px, $lh: 1.22, $ls: 0.02em);
+  color: $accent-color;
+}
