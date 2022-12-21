@@ -1,12 +1,18 @@
 .site-nav {
-  // margin-left: 93px;
-
   &__list {
-    // display: flex;
+    display: flex;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
   }
 
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
   }
 }
 
@@ -14,7 +20,7 @@
   position: relative;
 
   &:not(:last-child) {
-    // margin-right: 50px;
+    margin-right: 50px;
   }
 }
 

@@ -186,10 +186,15 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .header__container {
-    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 80px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -330,15 +335,32 @@ img {
   color: #2196f3;
 }
 
+.site-nav__list {
+  display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .site-nav__list {
+    display: flex;
+  }
+}
 @media screen and (max-width: 767px) {
   .site-nav {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
   }
 }
 
 .site-nav__item {
   position: relative;
 }
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav__link {
   position: relative;
   display: inline-flex;
@@ -368,6 +390,31 @@ img {
   border-radius: 2px;
 }
 
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 .contact__mail-icon, .contact__phone-icon {
   margin-right: 10px;
   fill: currentColor;
@@ -379,8 +426,6 @@ img {
 }
 
 .contact__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -390,6 +435,15 @@ img {
 }
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
+}
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .hero {

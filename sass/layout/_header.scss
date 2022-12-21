@@ -3,16 +3,19 @@
   margin-right: auto;
 
   // width: 1600px;
+
   border-bottom: 1px solid #ececec;
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
 
-    // @include centeredFlex();
-    @media screen and (max-width: 767px) {
-      height: 60px;
+    @media screen and (min-width: $tablet) {
+      @include centeredFlex();
+      justify-content: space-between;
+      height: 80px;
     }
   }
 

@@ -1,13 +1,23 @@
 .contact {
-  // @include centeredFlex();
-  // margin-left: auto;
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex();
+    margin-left: auto;
+  }
 
   &__item {
-    // @include centeredFlex();
+    @media screen and (min-width: $desktop) {
+      @include centeredFlex();
+    }
   }
 
   &__item:not(:last-child) {
-    // margin-right: 50px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 50px;
+    }
   }
 
   &__mail-icon,
@@ -22,10 +32,6 @@
 }
 
 .contact__link {
-  // @include centeredFlex();
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   @include font($fw: 500, $ls: 0.02em);
   color: $secondary-text-color;
   transition: color $duration $timing-function;
@@ -33,5 +39,11 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex();
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
