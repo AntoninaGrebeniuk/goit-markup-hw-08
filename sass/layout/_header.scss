@@ -49,6 +49,9 @@
     fill: currentColor;
   }
 
-  & .is-open {
-  }
+  // &.is-open + .mobile-menu {
+  //   display: block;
+  //   overflow: hidden;
+  //   visibility: visible;
+  // }
 }

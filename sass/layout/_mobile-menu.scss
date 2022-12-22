@@ -1,18 +1,22 @@
 .mobile-menu {
   display: none;
-
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
 
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  // overflow: hidden;
+  visibility: hidden;
 
   background-color: $primary-white-color;
 
-  &.is-open {
-    display: block;
-  }
+  // &.is-open {
+  //   display: block;
+  //   overflow: hidden;
+  //   visibility: visible;
+  // }
 
   @media screen and (min-width: $tablet) {
     display: none;
@@ -31,6 +35,7 @@
   position: absolute;
   right: 15px;
   top: 10px;
+  border-radius: 50%;
 
   &:hover,
   &:focus {

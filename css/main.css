@@ -224,17 +224,17 @@ img {
 .menu-btn__open-icon {
   fill: currentColor;
 }
+
 .mobile-menu {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  visibility: hidden;
   background-color: #ffffff;
-}
-.mobile-menu.is-open {
-  display: block;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -254,6 +254,7 @@ img {
   position: absolute;
   right: 15px;
   top: 10px;
+  border-radius: 50%;
 }
 .menu-btn__close:hover, .menu-btn__close:focus {
   color: #2196f3;
