@@ -56,7 +56,14 @@
     border: 1px solid $accent-color;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;

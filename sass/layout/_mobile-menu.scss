@@ -1,5 +1,4 @@
 .mobile-menu {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -7,16 +6,19 @@
   width: 100vw;
   height: 100vh;
   z-index: 3;
-  // overflow: hidden;
+  overflow: hidden;
   visibility: hidden;
 
   background-color: $primary-white-color;
 
-  // &.is-open {
-  //   display: block;
-  //   overflow: hidden;
-  //   visibility: visible;
-  // }
+  transform: translateX(100%);
+  transition: transform $duration $timing-function, visibility $duration $timing-function;
+
+  &.is-open {
+    transform: translateX(0);
+    // overflow: hidden;
+    visibility: visible;
+  }
 
   @media screen and (min-width: $tablet) {
     display: none;

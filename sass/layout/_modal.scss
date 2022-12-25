@@ -6,9 +6,14 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 
+  overflow-y: scroll;
   opacity: 1;
 
   transition: opacity $duration $timing-function;
+
+  @media screen and (max-width: 479px) {
+    padding: 94px 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -21,30 +26,50 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
 
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
 
   background: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1);
-
-  transition: transform $duration $timing-function;
-
   &__title {
     margin-bottom: 12px;
 
-    @include font($fs: 20px, $lh: 1.15);
+    @include font($fs: 20px, $lh: 1.5);
     text-align: center;
 
     color: $primary-text-color;
+
+    @media screen and (min-width: $desktop) {
+      @include font($fs: 20px, $lh: 1.15);
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+    width: 100%;
+    height: 609px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 450px;
+    // max-height: 100%;
+    width: 100%;
+    height: 609px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $duration $timing-function;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -133,7 +158,7 @@
 
 .form__comment {
   padding: 12px 16px;
-  width: 448px;
+  // width: 448px;
   height: 120px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -173,8 +198,16 @@
   &-text {
     display: inline-flex;
 
-    @include font(null, $lh: 1.71);
+    @include font(null, $fs: 10px, $lh: 1.17);
     color: $secondary-text-color;
+
+    @media screen and (min-width: $mobile) {
+      @include font(null, $fs: 12px, $lh: 1.17);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include font(null, $lh: 1.71);
+    }
   }
 }
 
@@ -197,7 +230,7 @@
   position: relative;
   display: inline-block;
   margin-left: 5px;
-  @include font(null, $lh: 1.71);
+  @include font(null, $fs: 10px, $lh: 1.17);
 
   color: $accent-color;
   transition: color $duration $timing-function;
@@ -211,11 +244,23 @@
     position: absolute;
     content: '';
     left: 0;
-    bottom: 5px;
+    bottom: 0;
     width: 100%;
     border-bottom: 1px solid $accent-color;
 
     color: $accent-color;
+
+    @media screen and (min-width: $desktop) {
+      bottom: 5px;
+    }
+  }
+
+  @media screen and (min-width: $mobile) {
+    @include font(null, $fs: 12px, $lh: 1.17);
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include font(null, $lh: 1.71);
   }
 }
 

@@ -4,6 +4,10 @@ body {
   background: $primary-white-color;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
 }
