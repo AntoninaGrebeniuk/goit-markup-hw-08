@@ -35,6 +35,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  // transition: transform $duration $timing-function;
+
   &__title {
     margin-bottom: 12px;
 
@@ -77,6 +79,7 @@
   position: absolute;
   top: 8px;
   right: 8px;
+  z-index: -5;
 
   @include centeredFlex();
 
@@ -212,9 +215,20 @@
 }
 
 .form__check-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
   position: absolute;
 
   &:checked + .form__check-icon {
