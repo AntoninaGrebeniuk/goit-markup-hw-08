@@ -21,7 +21,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    width: 326px;
+    width: 335px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -72,10 +72,6 @@
   }
 
   &__item {
-    // flex-basis: calc((100% - 60px) / 3);
-    // margin-right: $card-gap;
-    // margin-bottom: $card-gap;
-
     &:not(:last-child) {
       @media screen and (max-width: 767px) {
         margin-bottom: $card-gap;

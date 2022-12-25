@@ -245,6 +245,7 @@ img {
 }
 .mobile-menu.is-open {
   transform: translateX(0);
+  overflow: scroll;
   visibility: visible;
 }
 @media screen and (min-width: 768px) {
@@ -984,7 +985,7 @@ img {
   .btn-set {
     display: flex;
     flex-wrap: wrap;
-    width: 326px;
+    width: 335px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1198,7 +1199,6 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
-  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1215,6 +1215,7 @@ img {
   color: #2196f3;
 }
 .btn-close__icon {
+  z-index: 15;
   fill: currentColor;
 }
 

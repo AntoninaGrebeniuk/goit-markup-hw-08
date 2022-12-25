@@ -79,7 +79,6 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  z-index: 5;
 
   @include centeredFlex();
 
@@ -99,6 +98,7 @@
   }
 
   &__icon {
+    z-index: 15;
     fill: currentColor;
   }
 }
