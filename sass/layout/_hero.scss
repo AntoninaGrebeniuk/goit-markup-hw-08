@@ -15,12 +15,12 @@
   background-position: center;
   background-size: cover;
 
-  max-width: 480px;
+  max-width: 767px;
   max-height: 400px;
   text-align: center;
   background-color: $background-color;
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $tablet) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero_tablet.jpg');
 
@@ -29,11 +29,11 @@
         url('../images/hero_tablet_2x.jpg');
     }
 
-    max-width: 768px;
+    max-width: 1199px;
     max-height: 400px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/bg_image.jpg');
 
