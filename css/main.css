@@ -272,6 +272,7 @@ img {
   color: #2196f3;
 }
 .menu-btn__close-icon {
+  z-index: 20;
   fill: currentColor;
 }
 
