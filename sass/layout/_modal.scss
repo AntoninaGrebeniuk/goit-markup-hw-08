@@ -26,16 +26,21 @@
 }
 
 .modal {
-  position: relative;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 450px;
+  width: 100%;
+  height: 609px;
   padding: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $duration $timing-function;
 
   background: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  // transition: transform $duration $timing-function;
 
   &__title {
     margin-bottom: 12px;
@@ -54,19 +59,6 @@
     max-width: 450px;
     width: 100%;
     height: 609px;
-  }
-
-  @media screen and (min-width: $mobile) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 450px;
-    // max-height: 100%;
-    width: 100%;
-    height: 609px;
-
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform $duration $timing-function;
   }
 
   @media screen and (min-width: $desktop) {
@@ -201,8 +193,12 @@
   &-text {
     display: inline-flex;
 
-    @include font(null, $fs: 10px, $lh: 1.17);
+    @include font(null, $fs: 7px, $lh: 1.17);
     color: $secondary-text-color;
+
+    @media screen and (min-width: 400px) {
+      @include font(null, $fs: 10px, $lh: 1.17);
+    }
 
     @media screen and (min-width: $mobile) {
       @include font(null, $fs: 12px, $lh: 1.17);
@@ -226,9 +222,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
-  // appearance: none;
   position: absolute;
 
   &:checked + .form__check-icon {
@@ -244,7 +237,7 @@
   position: relative;
   display: inline-block;
   margin-left: 5px;
-  @include font(null, $fs: 10px, $lh: 1.17);
+  @include font(null, $fs: 8px, $lh: 1.17);
 
   color: $accent-color;
   transition: color $duration $timing-function;
@@ -267,6 +260,10 @@
     @media screen and (min-width: $desktop) {
       bottom: 5px;
     }
+  }
+
+  @media screen and (min-width: 400px) {
+    @include font(null, $fs: 10px, $lh: 1.17);
   }
 
   @media screen and (min-width: $mobile) {
